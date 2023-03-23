@@ -38,7 +38,7 @@ export default function SearchPage() {
 
   return (
     <Layout>
-      <Flex alignItems={'center'} gap={'10px'} onClick={() => navigate('/')}>
+      <Flex alignItems={'center'} gap={'10px'} cursor={'pointer'} onClick={() => navigate('/')}>
         <ArrowBackIcon width={'24px'} height={'auto'} color={'#fff'} />
         <Text fontSize={{ base: '16px', md: '18px' }}>Back to Home</Text>
       </Flex>

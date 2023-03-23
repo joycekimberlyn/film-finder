@@ -45,6 +45,7 @@ export default function SearchInput() {
     <>
       <Box
         display={!isSearchOpen && !isMobile ? 'block' : 'none'}
+        cursor={'pointer'}
         onClick={() => setIsSearchOpen(true)}
       >
         <SearchIcon width={'20px'} height={'auto'} color={'#fff'} />
@@ -101,6 +102,7 @@ export default function SearchInput() {
             right={'15px'}
             width={'15px'}
             color={'#485461'}
+            cursor={'pointer'}
             onClick={() => setSearchValue('')}
           />
         </Box>

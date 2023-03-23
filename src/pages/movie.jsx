@@ -50,6 +50,7 @@ export default function MovieDetails() {
             <Flex
               alignItems={'center'}
               gap={'10px'}
+              cursor={'pointer'}
               onClick={() => navigate('/')}
             >
               <ArrowBackIcon width={'24px'} height={'auto'} color={'#fff'} />
@@ -84,6 +85,7 @@ export default function MovieDetails() {
               <Flex
                 alignItems={'center'}
                 gap={'10px'}
+                cursor={'pointer'}
                 onClick={() => navigate('/')}
               >
                 <ArrowBackIcon width={'24px'} height={'auto'} color={'#fff'} />
