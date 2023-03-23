@@ -4,6 +4,9 @@ import axios from 'axios';
 import { Text, Grid, Flex } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 
+// constants
+import { API_URL } from '../constants/movies-link';
+
 // components
 import Layout from '../components/layout';
 import SearchInput from '../components/searchInput';
@@ -25,7 +28,7 @@ export default function SearchPage() {
     setPage(page);
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?query=${query}&page=${page}&api_key=2244bbd8f89a9ac9f14898b2bcde5825`
+        `${API_URL}/search/movie?query=${query}&page=${page}&api_key=2244bbd8f89a9ac9f14898b2bcde5825`
       )
       .then(response => {
         setMovieList(response.data);

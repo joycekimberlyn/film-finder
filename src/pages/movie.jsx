@@ -5,7 +5,7 @@ import { Grid, Flex, Image, Box, Text, Show } from '@chakra-ui/react';
 import { TimeIcon, ArrowBackIcon } from '@chakra-ui/icons';
 
 // constants
-import { IMAGE_URL } from '../constants/movies-link';
+import { IMAGE_URL, API_URL } from '../constants/movies-link';
 
 // components
 import SearchInput from '../components/searchInput';
@@ -18,7 +18,7 @@ export default function MovieDetails() {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=2244bbd8f89a9ac9f14898b2bcde5825`
+        `${API_URL}/movie/${id}?api_key=2244bbd8f89a9ac9f14898b2bcde5825`
       )
       .then(response => {
         setMovie(response.data);

@@ -3,6 +3,9 @@ import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { Heading, Grid, Flex } from '@chakra-ui/react';
 
+// constants
+import { API_URL } from '../constants/movies-link';
+
 // components
 import SearchInput from '../components/searchInput';
 import Layout from '../components/layout';
@@ -24,7 +27,7 @@ export default function Homepage() {
 
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=2244bbd8f89a9ac9f14898b2bcde5825`
+        `${API_URL}/movie/popular?page=${page}&api_key=2244bbd8f89a9ac9f14898b2bcde5825`
       )
       .then(response => {
         setMovieList(response.data);
